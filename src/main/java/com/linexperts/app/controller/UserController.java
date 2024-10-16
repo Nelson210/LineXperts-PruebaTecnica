@@ -11,8 +11,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- *
- * @author ntejada
+ * Controlador REST para gestionar las operaciones relacionadas con los usuarios.
+ * 
+ * Este controlador proporciona un punto de acceso para obtener la lista de usuarios.
+ * 
+ * @autor ntejada
  */
 @RestController
 @RequestMapping("/users")
@@ -21,6 +24,11 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    /**
+     * Maneja las solicitudes GET para obtener la lista de usuarios.
+     * 
+     * @return una respuesta HTTP con la lista de usuarios y el estado HTTP correspondiente
+     */
     @GetMapping
     public ResponseEntity<List<User>> obtenerUsuarios() {
         try {

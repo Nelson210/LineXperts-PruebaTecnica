@@ -15,6 +15,12 @@ import static org.mockito.Mockito.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
+/**
+ * Clase de prueba para el servicio UserService.
+ * Utiliza Mockito para simular el comportamiento de RestTemplate y JUnit 5 para las pruebas.
+ * 
+ * @author ntejada
+ */
 class UserServiceTest {
 
     @Mock
@@ -23,11 +29,19 @@ class UserServiceTest {
     @InjectMocks
     private UserService userService;
 
+    /**
+     * Configura el entorno de pruebas antes de cada test.
+     * Inicializa los mocks de Mockito.
+     */
     @BeforeEach
     void setUp() {
         MockitoAnnotations.openMocks(this);
     }
 
+    /**
+     * Prueba que el método obtenerUsuarios retorne una lista de usuarios.
+     * Simula una respuesta exitosa de la API externa.
+     */
     @Test
     void obtenerUsuarios_retornaListaUsuarios() {
         User[] usuariosArray = {new User(1L, "Leanne Graham"), new User(2L, "Ervin Howell")};
@@ -39,6 +53,10 @@ class UserServiceTest {
         assertEquals(2, usuarios.size());
     }
 
+    /**
+     * Prueba que el método obtenerUsuarios lance una RestClientException.
+     * Simula un error al consumir la API externa.
+     */
     @Test
     void obtenerUsuarios_lanzaRestClientException() {
         when(restTemplate.getForEntity(anyString(), eq(User[].class))).thenThrow(new RestClientException("Error"));

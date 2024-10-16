@@ -10,7 +10,9 @@ import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
 /**
- *
+ * Servicio que maneja la lógica de negocio relacionada con los usuarios.
+ * Utiliza RestTemplate para consumir una API externa.
+ * 
  * @author ntejada
  */
 @Service
@@ -19,6 +21,12 @@ public class UserService {
     @Autowired
     private RestTemplate restTemplate;
 
+    /**
+     * Obtiene la lista de usuarios desde una API externa.
+     * 
+     * @return Lista de usuarios.
+     * @throws RestClientException Si ocurre un error al consumir la API externa.
+     */
     public List<User> obtenerUsuarios() {
         String url = "https://jsonplaceholder.typicode.com/users";
         try {
