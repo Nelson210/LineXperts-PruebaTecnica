@@ -16,7 +16,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 class UserServiceTest {
-
+    // objetivo 2
     @Mock
     private RestTemplate restTemplate;
 
