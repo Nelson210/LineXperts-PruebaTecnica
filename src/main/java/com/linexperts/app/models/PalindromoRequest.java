@@ -7,7 +7,6 @@ import lombok.Data;
  * @author ntejada
  */
 @Data
-public class Geo {
-    private String lat;
-    private String lng;
+public class PalindromoRequest {
+    private String palindromo;
 }
