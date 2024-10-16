@@ -3,7 +3,7 @@ Este repositorio contiene la solución a los dos objetivos planteados en la prue
 
 ## Requisitos
 
-- Java 11 o superior
+- Java 21 o superior
 - Maven 3.6.3 o superior
 - Clonar el repositorio y entrar en la carpeta del repositorio:
 
@@ -15,7 +15,7 @@ Este repositorio contiene la solución a los dos objetivos planteados en la prue
 
 Este proyecto demuestra cómo consumir una API externa utilizando Spring Boot. Incluye configuración de RestTemplate, manejo global de excepciones y pruebas unitarias con JUnit 5 y Mockito.
 
-# Configuración del Proyecto
+## Configuración del Proyecto
 1. Abre una terminal y cambia a la rama que contiene el objetivo 1:
    ```sh
    git fetch origin
@@ -43,7 +43,7 @@ Este proyecto demuestra cómo consumir una API externa utilizando Spring Boot. I
 
 Este proyecto demuestra cómo verificar si un texto es un palíndromo, cuántos caracteres tiene y si contiene caracteres especiales.
 
-# Configuración del Proyecto
+## Configuración del Proyecto
 1. Abre una terminal y cambia a la rama que contiene el objetivo 2:
    ```sh
    git fetch origin
